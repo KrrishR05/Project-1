@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa; /* Light Grey */
+    padding: 15px 20px;
+}
+
+.logo {
+    color: deeppink;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: blue;
+}
+
+body.service, body.about, body.contact {
+    background: linear-gradient(to right, #F0F8FF, #DCEEFB); /* Soft Blue Gradient */
+    color: #333; /* Dark Grey for readability */
+}
+
+.content-popup {
+    width: 80%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInPopup 0.6s ease-in-out forwards;
+}
+
+/* Animation */
+@keyframes fadeInPopup {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Content Sections */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Light Background */
+}
+
+h2 {
+    font-size: 35px;
+    color: blue;
+    margin-bottom: 10px;
+}
+h3 {
+    font-size: 20px;
+    color: blue;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 18px;
+    color: deeppink;
+}
+
+/* Responsive adjustments for content */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 10px;
+    }
+
+    .content-popup {
+        width: 90%;
+        padding: 20px;
+        margin: 30px auto;
+        text-align: left; /* Optional: Left align text on mobile */
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+.content-popup p {
+    max-width: 600px;
+    margin: auto;
+}
